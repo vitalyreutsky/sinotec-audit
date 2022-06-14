@@ -51,3 +51,27 @@
   fill: rgba(224, 215, 215, 0.523);
   transform: rotate(45deg);
 }
+
+@media (max-width: 800px) {
+  .benefits {
+    &__columns {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      flex: 0 1 50%;
+      margin-bottom: var(--spacing-extra-large);
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .benefits {
+    &__column {
+      flex: 0 1 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
