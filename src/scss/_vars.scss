@@ -1,0 +1,35 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Muller";
+  --content-width: 1250px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --primary: #153d65;
+  --accent-1: #eaf8f5;
+  --accent-2: #428783;
+  --main-fg-color: #558f3e;
+  --secondary-fg-color: #aaaaaa;
+  --main-bg-color: #aaaaaa;
+  --secondary-bg-color: #aaaaaa;
+  --button1-bg-color: rgb(33, 33, 35);
+  --button1-fg-color: #2990ea;
+
+  // spacing
+  --spacing-small: 10px;
+  --spacing-medium: 15px;
+  --spacing-large: 20px;
+  --spacing-extra-large: 30px;
+
+  // font-size
+  --size-small: 16px;
+  --size-medium: 18px;
+  --size-big: 40px;
+
+  // box-shadow
+  --box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}

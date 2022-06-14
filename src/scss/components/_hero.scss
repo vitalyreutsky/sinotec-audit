@@ -1,0 +1,125 @@
+.hero {
+  height: 100vh;
+  padding-top: 200px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: -250px;
+    z-index: -1;
+    opacity: 0.1;
+    height: 100%;
+    width: 50%;
+    background: url("../img/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    color: var(--primary);
+    max-width: 650px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--spacing-large);
+    font-size: var(--size-big);
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: var(--spacing-extra-large);
+    color: var(--accent-2);
+    font-weight: normal;
+  }
+
+  &__btn {
+    padding: var(--spacing-medium) var(--spacing-extra-large);
+    border-radius: 10px;
+    background-color: var(--accent-2);
+    color: var(--light-color);
+    font-size: var(--size-medium);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s;
+    &:hover {
+      background-color: rgb(14, 114, 137);
+    }
+  }
+
+  &__img {
+    img {
+      border-radius: 100%;
+      border: 2px solid var(--primary);
+      box-shadow: var(--box-shadow);
+    }
+  }
+}
+
+.scroll-mouse {
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.scroll-mouse::after,
+.scroll-mouse::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  border: 2px solid var(--primary);
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+  -moz-transform: translate(-50%, -100%) rotate(45deg);
+  -ms-transform: translate(-50%, -100%) rotate(45deg);
+  -o-transform: translate(-50%, -100%) rotate(45deg);
+  transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+
+  animation: scrollDown 1.5s infinite;
+}
+
+.scroll-mouse::after {
+  top: 20%;
+  animation-delay: 0.4s;
+}
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    top: 80%;
+  }
+}
