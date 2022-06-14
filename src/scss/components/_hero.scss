@@ -152,7 +152,7 @@
 
 @include mobile {
   .hero {
-    padding-top: 150px;
+    padding-top: 120px;
     &::after {
       width: 100%;
       left: 0;
@@ -160,5 +160,9 @@
     &__title {
       font-size: 30px;
     }
+  }
+
+  .scroll-mouse {
+    bottom: 70px;
   }
 }

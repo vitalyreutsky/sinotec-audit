@@ -1,4 +1,9 @@
 .about {
+  padding: var(--spacing-extra-large) 0 50px 0;
+  background-color: var(--button1-fg-color);
+  -webkit-clip-path: polygon(0% 0%, 100% 3%, 100% 50%, 100% 87%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 3%, 100% 50%, 100% 87%, 0% 100%);
+  margin-bottom: 100px;
   &__inner {
     display: flex;
     flex-direction: row-reverse;
@@ -8,31 +13,27 @@
 
   &__title {
     font-size: var(--size-medium);
-    color: var(--button1-fg-color);
+    color: var(--primary);
     margin-bottom: var(--spacing-small);
   }
 
   &__text {
-    color: var(--accent-2);
+    color: var(--light-color);
     max-width: 600px;
 
     p {
+      display: flex;
       margin: 0;
       margin-bottom: var(--spacing-small);
-      padding-left: 40px;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: url("../img/svg/ok.svg");
-        background-position: center;
-        width: 30px;
-        height: 30px;
-      }
     }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    fill: var(--primary);
+    margin-right: var(--spacing-small);
   }
 
   &__img {
@@ -45,6 +46,7 @@
 
 @media (max-width: 1145px) {
   .about {
+    padding: 50px 0px 100px 0px;
     &__inner {
       flex-wrap: wrap;
       justify-content: center;
@@ -53,5 +55,11 @@
     &__descr {
       margin-bottom: var(--spacing-extra-large);
     }
+  }
+}
+
+@include mobile {
+  .about {
+    padding-bottom: 130px;
   }
 }
