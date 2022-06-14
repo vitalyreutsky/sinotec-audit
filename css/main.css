@@ -605,6 +605,18 @@ a {
   box-shadow: var(--box-shadow);
 }
 
+@media (max-width: 1145px) {
+  .about__inner {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .about__descr {
+    margin-bottom: var(--spacing-extra-large);
+  }
+}
 .title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
