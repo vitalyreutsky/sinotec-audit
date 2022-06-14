@@ -558,6 +558,9 @@ a {
   .hero__title {
     font-size: 30px;
   }
+  .scroll-mouse {
+    bottom: 70px;
+  }
 }
 .about {
   padding: var(--spacing-extra-large) 0 50px 0;
