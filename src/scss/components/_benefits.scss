@@ -1,4 +1,6 @@
 .benefits {
+  padding: 50px 0;
+  background-color: rgb(254, 254, 254);
   &__subtitle {
     font-weight: normal;
     text-align: center;
@@ -22,22 +24,24 @@
     height: 250px;
     margin: 0 10px;
     position: relative;
-    background-color: var(--button1-fg-color);
+    background-color: var(--light-color);
     padding: var(--spacing-large);
     border-radius: 15px;
     box-shadow: var(--box-shadow);
     overflow: hidden;
+    border-left: 3px solid var(--orange);
   }
 
   &__item-title {
     text-align: center;
-    color: var(--light-color);
+    color: var(--primary);
     margin-top: var(--spacing-extra-large);
     flex: 1 0 auto;
   }
 
   &__item-text {
-    color: var(--accent-1);
+    color: var(--primary);
+    overflow: auto;
   }
 }
 
@@ -47,12 +51,12 @@
   right: -20px;
   width: 100px;
   height: 100px;
-
-  fill: rgba(224, 215, 215, 0.523);
+  fill: var(--orange);
+  opacity: 0.3;
   transform: rotate(45deg);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .benefits {
     &__columns {
       flex-wrap: wrap;
