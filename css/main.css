@@ -549,7 +549,7 @@ a {
 }
 @media (max-width: 576px) {
   .hero {
-    padding-top: 150px;
+    padding-top: 120px;
   }
   .hero::after {
     width: 100%;
