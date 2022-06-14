@@ -57,10 +57,6 @@ console.log(mobileCheck());
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');
 
-// Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
-
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
 // document.addEventListener('swiped', function(e) {
