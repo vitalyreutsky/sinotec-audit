@@ -445,7 +445,7 @@ a {
 .hero__btn {
   padding: var(--spacing-medium) var(--spacing-extra-large);
   border-radius: 10px;
-  background-color: var(--accent-2);
+  background-color: var(--button1-fg-color);
   color: var(--light-color);
   font-size: var(--size-medium);
   -webkit-box-shadow: var(--box-shadow);
