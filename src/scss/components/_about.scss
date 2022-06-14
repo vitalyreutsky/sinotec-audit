@@ -42,3 +42,16 @@
     }
   }
 }
+
+@media (max-width: 1145px) {
+  .about {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__descr {
+      margin-bottom: var(--spacing-extra-large);
+    }
+  }
+}
