@@ -1,1 +1,3 @@
-console.log('components');
+import "./components/aos";
+import "./components/burger";
+

@@ -32,7 +32,18 @@
   &__title {
     margin: 0;
     margin-bottom: var(--spacing-large);
+    padding-bottom: var(--spacing-large);
     font-size: var(--size-big);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 170px;
+      height: 3px;
+      background-color: var(--primary);
+    }
   }
 
   &__subtitle {
@@ -57,8 +68,7 @@
 
   &__img {
     img {
-      border-radius: 100%;
-      border: 2px solid var(--primary);
+      border-radius: 50px;
       box-shadow: var(--box-shadow);
     }
   }
@@ -121,5 +131,34 @@
   100% {
     opacity: 1;
     top: 80%;
+  }
+}
+
+@include tablet {
+  .hero {
+    &::after {
+      width: 70%;
+      left: 300px;
+    }
+    &__text {
+      max-width: 100%;
+      justify-content: center;
+    }
+    &__img {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .hero {
+    padding-top: 150px;
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+    &__title {
+      font-size: 30px;
+    }
   }
 }

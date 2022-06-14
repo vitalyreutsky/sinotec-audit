@@ -3,7 +3,7 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+console.log(mobileCheck());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -19,9 +19,6 @@ console.log(mobileCheck())
 
 // Фикс фулскрин-блоков
 // import './functions/fix-fullheight';
-
-// Реализация бургер-меню
-// import { burger } from './functions/burger';
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -55,10 +52,6 @@ console.log(mobileCheck())
 // const swiper = new Swiper(el, {
 //   slidesPerView: 'auto',
 // });
-
-// Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
