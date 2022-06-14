@@ -1,0 +1,44 @@
+.about {
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: var(--size-medium);
+    color: var(--button1-fg-color);
+    margin-bottom: var(--spacing-small);
+  }
+
+  &__text {
+    color: var(--accent-2);
+    max-width: 600px;
+
+    p {
+      margin: 0;
+      margin-bottom: var(--spacing-small);
+      padding-left: 40px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/svg/ok.svg");
+        background-position: center;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__img {
+    img {
+      border-radius: 50px;
+      box-shadow: var(--box-shadow);
+    }
+  }
+}

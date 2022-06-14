@@ -1,6 +1,7 @@
 .hero {
   height: 100vh;
   padding-top: 200px;
+  margin-bottom: 100px;
   position: relative;
   &::after {
     content: "";
@@ -30,7 +31,6 @@
   }
 
   &__title {
-    margin: 0;
     margin-bottom: var(--spacing-large);
     padding-bottom: var(--spacing-large);
     font-size: var(--size-big);
@@ -56,7 +56,7 @@
   &__btn {
     padding: var(--spacing-medium) var(--spacing-extra-large);
     border-radius: 10px;
-    background-color: var(--accent-2);
+    background-color: var(--button1-fg-color);
     color: var(--light-color);
     font-size: var(--size-medium);
     box-shadow: var(--box-shadow);
