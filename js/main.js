@@ -21,6 +21,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/aos */ "./src/js/components/aos.js");
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/smoth-scroll */ "./src/js/components/smoth-scroll.js");
+/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -79,9 +82,6 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');
-// Подключение плавной прокрутки к якорям
-// import SmoothScroll from 'smooth-scroll';
-// const scroll = new SmoothScroll('a[href*="#"]');
 // Подключение событий свайпа на мобильных
 // import 'swiped-events';
 // document.addEventListener('swiped', function(e) {
@@ -159,6 +159,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _functions_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/burger */ "./src/js/functions/burger.js");
 // Реализация бургер-меню
 
+
+/***/ }),
+
+/***/ "./src/js/components/smoth-scroll.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/smoth-scroll.js ***!
+  \*******************************************/
+/***/ (() => {
+
+// Подключение плавной прокрутки к якорям
+var menuLinks = document.querySelectorAll(".nav__link[data-goto]");
+
+if (menuLinks.length > 0) {
+  menuLinks.forEach(function (menuLink) {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    var menuLink = e.target;
+
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      var goToBlock = document.querySelector(menuLink.dataset.goto);
+      var goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector(".header").offsetHeight - 30;
+      window.scrollTo({
+        top: goToBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+    }
+  }
+}
 
 /***/ }),
 
