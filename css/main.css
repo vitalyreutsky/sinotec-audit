@@ -538,6 +538,9 @@ a {
   }
 }
 @media (max-width: 576px) {
+  .hero {
+    padding-top: 150px;
+  }
   .hero::after {
     width: 100%;
     left: 0;
