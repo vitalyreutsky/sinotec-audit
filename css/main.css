@@ -559,6 +559,9 @@ a {
     font-size: 30px;
   }
 }
+.about {
+  margin-bottom: 100px;
+}
 .about__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,6 +624,7 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  white-space: nowrap;
   margin: 0 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
