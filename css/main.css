@@ -587,20 +587,19 @@ a {
   max-width: 600px;
 }
 .about__text p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   margin-bottom: var(--spacing-small);
-  padding-left: 40px;
-  position: relative;
 }
-.about__text p::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../img/svg/ok.svg");
-  background-position: center;
+.about__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
+  fill: var(--primary);
+  margin-right: var(--spacing-small);
 }
 .about__img img {
   border-radius: 50px;
