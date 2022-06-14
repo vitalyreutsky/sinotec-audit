@@ -172,7 +172,7 @@ a {
   left: 0;
   z-index: 1;
   width: 100%;
-  padding: var(--spacing-large) 0;
+  background-color: var(--accent-1);
 }
 .header__container {
   display: -webkit-box;
@@ -188,6 +188,8 @@ a {
   padding-bottom: var(--spacing-large);
   -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
   box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  background-color: var(--accent-1);
+  padding: var(--spacing-large);
 }
 
 .logo__title {
@@ -373,6 +375,7 @@ a {
   }
   .nav__item:not(:last-child) {
     margin-bottom: var(--spacing-large);
+    margin-right: 0;
   }
   .nav__link {
     font-size: var(--size-medium);
@@ -563,7 +566,7 @@ a {
     font-size: 30px;
   }
   .scroll-mouse {
-    bottom: 70px;
+    bottom: 100px;
   }
 }
 .about {
@@ -736,6 +739,7 @@ a {
 }
 .benefits__item-text {
   color: var(--accent-1);
+  overflow: auto;
 }
 
 .benefits-icon {
@@ -750,7 +754,7 @@ a {
   transform: rotate(45deg);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .benefits__columns {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;

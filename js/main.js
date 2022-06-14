@@ -209,37 +209,37 @@ __webpack_require__.r(__webpack_exports__);
 (function () {
   var _document, _document2, _document3, _document4;
 
-  var burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
-  var menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
-  var menuItems = (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelectorAll('[data-menu-item]');
-  var overlay = (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector('[data-menu-overlay]');
-  burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', function (e) {
-    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
-    menu === null || menu === void 0 ? void 0 : menu.classList.toggle('menu--active');
+  var burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector("[data-burger]");
+  var menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector("[data-menu]");
+  var menuItems = (_document3 = document) === null || _document3 === void 0 ? void 0 : _document3.querySelectorAll("[data-menu-item]");
+  var overlay = (_document4 = document) === null || _document4 === void 0 ? void 0 : _document4.querySelector("[data-menu-overlay]");
+  burger === null || burger === void 0 ? void 0 : burger.addEventListener("click", function (e) {
+    burger === null || burger === void 0 ? void 0 : burger.classList.toggle("burger--active");
+    menu === null || menu === void 0 ? void 0 : menu.classList.toggle("menu--active");
 
-    if (menu !== null && menu !== void 0 && menu.classList.contains('menu--active')) {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'true');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Закрыть меню');
+    if (menu !== null && menu !== void 0 && menu.classList.contains("menu--active")) {
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-expanded", "true");
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-label", "Закрыть меню");
       (0,_functions_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
     } else {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-expanded", "false");
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-label", "Открыть меню");
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     }
   });
-  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', function () {
-    burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
-    burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-    burger.classList.remove('burger--active');
-    menu.classList.remove('menu--active');
+  overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener("click", function () {
+    burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-expanded", "false");
+    burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-label", "Открыть меню");
+    burger.classList.remove("burger--active");
+    menu.classList.remove("menu--active");
     (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
   });
   menuItems === null || menuItems === void 0 ? void 0 : menuItems.forEach(function (el) {
-    el.addEventListener('click', function () {
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-expanded', 'false');
-      burger === null || burger === void 0 ? void 0 : burger.setAttribute('aria-label', 'Открыть меню');
-      burger.classList.remove('burger--active');
-      menu.classList.remove('menu--active');
+    el.addEventListener("click", function () {
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-expanded", "false");
+      burger === null || burger === void 0 ? void 0 : burger.setAttribute("aria-label", "Открыть меню");
+      burger.classList.remove("burger--active");
+      menu.classList.remove("menu--active");
       (0,_functions_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
     });
   });
