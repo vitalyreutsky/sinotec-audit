@@ -4,8 +4,8 @@
 
 .accordion {
   &__item {
-    background-color: var(--accent-2);
-    background: var(--accent-gradient);
+    background-color: var(--light-color);
+    //background: var(--accent-gradient);
     color: var(--light-color);
     margin: 10px 0px;
     border-radius: 5px;
@@ -26,16 +26,11 @@
   &__header-title {
     display: flex;
     align-items: center;
-  }
-  &__header-img {
-    width: 40px;
-    height: 40px;
-    fill: var(--light-color);
-    margin-right: 20px;
+    color: var(--primary);
   }
 
   &__header-icon {
-    fill: var(--light-color);
+    fill: var(--primary);
     width: 20px;
     height: 20px;
     transform: rotate(0);
@@ -58,12 +53,14 @@
     padding-bottom: 10px;
   }
   &__body-price {
+    color: var(--primary);
     text-align: right;
     font-size: 29px;
     font-weight: 700;
     vertical-align: top;
   }
   &__body-text {
+    color: var(--primary);
     max-width: 70%;
     width: 100%;
     font-size: 19px;

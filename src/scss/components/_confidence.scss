@@ -1,5 +1,5 @@
 .confidence {
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   margin-bottom: 100px;
   &__item {
     text-align: center;
@@ -21,10 +21,10 @@
 
 @include small-tablet {
   .confidence {
-    padding: 30px 0;
+    padding: 20px 20px 0 20px;
 
     &__item {
-      padding: 30px;
+      padding: 20px;
     }
   }
 }
@@ -32,5 +32,8 @@
 @include mobile {
   .confidence {
     margin-bottom: 50px;
+    &__title {
+      font-size: 20px;
+    }
   }
 }
