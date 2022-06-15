@@ -858,15 +858,18 @@ a {
 
 @media (max-width: 768px) {
   .confidence {
-    padding: 30px 30px 0 30px;
+    padding: 20px 20px 0 20px;
   }
   .confidence__item {
-    padding: 30px;
+    padding: 20px;
   }
 }
 @media (max-width: 576px) {
   .confidence {
     margin-bottom: 50px;
+  }
+  .confidence__title {
+    font-size: 20px;
   }
 }
 .services {
