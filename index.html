@@ -68,7 +68,13 @@
           <a href="#" class="nav__link" data-menu-item>Преимущества</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link" data-menu-item>Результат</a>
+          <a
+            href="#"
+            class="nav__link"
+            data-goto=".results-scroll"
+            data-menu-item
+            >Результат</a
+          >
         </li>
         <li class="nav__item">
           <a href="#" class="nav__link" data-menu-item>Цена</a>
@@ -110,7 +116,12 @@
       >
         Бизнес — решения для управления рисками при импорте из Китая
       </h3>
-      <button class="btn__primary btn btn-reset">Оставьте заявку</button>
+      <button
+        class="hero__btn btn__primary btn btn-reset"
+        data-da=".hero__container,1024,last"
+      >
+        Оставьте заявку
+      </button>
     </div>
 
     <div class="hero__benefits">
@@ -118,13 +129,9 @@
         Приходиться делать скидки из-за брака?
       </h5>
       <h4 class="hero__benefits-title">Увеличим прибыль</h4>
-      <h5 class="hero__benefits-subtitle">
-        Клиенты жалуются на качество?
-      </h5>
+      <h5 class="hero__benefits-subtitle">Клиенты жалуются на качество?</h5>
       <h4 class="hero__benefits-title">Повысим качество</h4>
-      <h5 class="hero__benefits-subtitle">
-        Теряете лояльность клиентов?
-      </h5>
+      <h5 class="hero__benefits-subtitle">Теряете лояльность клиентов?</h5>
       <h4 class="hero__benefits-title">Восстановим репутацию</h4>
     </div>
   </div>
@@ -517,9 +524,43 @@
     </div>
   </div>
 </div>
- <div class="results">
+ <div class="results results-scroll">
   <div class="container">
     <h2 class="title">Что вы получите?</h2>
+    <div class="progress__section">
+      <div class="progress">
+        <h4 class="results__title">ПРОФЕССИОНАЛЬНАЯ QUALITY TEAM</h4>
+        <div class="progress__bar" data-progress="88">
+          <span>88%</span>
+        </div>
+        <h5 class="results__subtitle">
+          88% наших Заказчиков улучшили качество товаров после проведения
+          инспекций!
+        </h5>
+      </div>
+
+      <div class="progress">
+        <h4 class="results__title">УПРАВЛЕНИЕ РИСКАМИ</h4>
+        <div class="progress__bar" data-progress="95">
+          <span>95%</span>
+        </div>
+        <h5 class="results__subtitle">
+          95% наших Заказчиков повысили доверие к репутации своей компании,
+          завоевали лояльность своих клиентов!
+        </h5>
+      </div>
+
+      <div class="progress">
+        <h4 class="results__title">СОТРУДНИЧЕСТВО WIN — WIN</h4>
+        <div class="progress__bar" data-progress="98">
+          <span>98%</span>
+        </div>
+        <h5 class="results__subtitle">
+          98% наших Заказчиков увеличили прибыль от продажи качественных
+          товаров!
+        </h5>
+      </div>
+    </div>
   </div>
 </div>
 
