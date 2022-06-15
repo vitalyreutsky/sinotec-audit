@@ -175,7 +175,7 @@ a {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   font-size: var(--size-big);
-  color: var(--orange);
+  color: var(--primary);
   font-weight: 700;
   margin-bottom: 50px;
   position: relative;
@@ -187,7 +187,7 @@ a {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--orange);
+  background-color: var(--primary);
 }
 
 .title-light {
