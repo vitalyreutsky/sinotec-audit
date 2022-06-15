@@ -453,7 +453,7 @@ a {
 
 @media (max-width: 576px) {
   .logo__title {
-    font-size: var(--size-small);
+    font-size: 14px;
   }
 }
 .hero {
