@@ -1,0 +1,33 @@
+.price {
+  margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.calc__title {
+  font-weight: normal;
+  font-size: 22px;
+  margin-bottom: var(--spacing-extra-large);
+}
+
+.calc__result {
+  font-size: var(--size-big);
+  color: var(--orange);
+  font-weight: 700;
+}
+
+@include small-tablet {
+  .price__inner {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+}
+
+@include mobile {
+  .price {
+    margin-bottom: 50px;
+  }
+}
