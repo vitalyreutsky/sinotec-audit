@@ -46,9 +46,6 @@
 
 @media (max-width: 1145px) {
   .about {
-    &__reverse {
-      flex-direction: column-reverse;
-    }
     &__inner {
       flex-wrap: wrap;
       justify-content: center;
