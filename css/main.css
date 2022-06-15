@@ -877,8 +877,7 @@ a {
 }
 
 .accordion__item {
-  background-color: var(--accent-2);
-  background: var(--accent-gradient);
+  background-color: var(--light-color);
   color: var(--light-color);
   margin: 10px 0px;
   border-radius: 5px;
@@ -909,15 +908,10 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.accordion__header-img {
-  width: 40px;
-  height: 40px;
-  fill: var(--light-color);
-  margin-right: 20px;
+  color: var(--primary);
 }
 .accordion__header-icon {
-  fill: var(--light-color);
+  fill: var(--primary);
   width: 20px;
   height: 20px;
   -webkit-transform: rotate(0);
@@ -946,12 +940,14 @@ a {
   padding-bottom: 10px;
 }
 .accordion__body-price {
+  color: var(--primary);
   text-align: right;
   font-size: 29px;
   font-weight: 700;
   vertical-align: top;
 }
 .accordion__body-text {
+  color: var(--primary);
   max-width: 70%;
   width: 100%;
   font-size: 19px;
