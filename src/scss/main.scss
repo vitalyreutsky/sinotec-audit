@@ -4,11 +4,12 @@
 @import "fonts";
 @import "settings";
 
+@import "./components/title";
+@import "./components/btn";
+
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
-@import "./components/title";
 @import "./components/benefits";
-
-
+@import "./components/confidence";

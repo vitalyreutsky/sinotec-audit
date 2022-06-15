@@ -1,0 +1,19 @@
+.confidence {
+  padding: 50px;
+  &__item {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    padding: 50px;
+  }
+  &__title {
+    color: var(--primary);
+    line-height: 1.4;
+    margin-bottom: var(--spacing-large);
+  }
+
+  &__btn {
+    display: inline-block;
+  }
+}

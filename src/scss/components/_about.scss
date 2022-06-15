@@ -6,6 +6,9 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
   }
 
   &__title {
@@ -43,6 +46,9 @@
 
 @media (max-width: 1145px) {
   .about {
+    &__reverse {
+      flex-direction: column-reverse;
+    }
     &__inner {
       flex-wrap: wrap;
       justify-content: center;
