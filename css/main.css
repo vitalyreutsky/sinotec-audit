@@ -175,7 +175,7 @@ a {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   font-size: var(--size-big);
-  color: var(--primary);
+  color: var(--orange);
   font-weight: 700;
   margin-bottom: 50px;
   position: relative;
@@ -187,7 +187,7 @@ a {
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--primary);
+  background-color: var(--orange);
 }
 
 .title-light {
@@ -837,7 +837,7 @@ a {
   }
 }
 .confidence {
-  padding: 50px;
+  padding: 50px 50px 0 50px;
   margin-bottom: 100px;
 }
 .confidence__item {
@@ -858,7 +858,7 @@ a {
 
 @media (max-width: 768px) {
   .confidence {
-    padding: 30px 0;
+    padding: 30px 30px 0 30px;
   }
   .confidence__item {
     padding: 30px;
