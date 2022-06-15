@@ -1,6 +1,6 @@
 .benefits {
-  padding: 50px 0;
-  background-color: rgb(254, 254, 254);
+  padding: 0px 50px 50px;
+  margin-bottom: 100px;
   &__subtitle {
     font-weight: normal;
     text-align: center;
@@ -36,7 +36,6 @@
     text-align: center;
     color: var(--primary);
     margin-top: var(--spacing-extra-large);
-    flex: 1 0 auto;
   }
 
   &__item-text {
@@ -69,8 +68,18 @@
   }
 }
 
+@include mobile {
+  .benefits {
+    margin-bottom: 50px;
+    &__item {
+      height: 250px;
+    }
+  }
+}
+
 @media (max-width: 580px) {
   .benefits {
+    padding: 0px;
     &__column {
       flex: 0 1 100%;
       &:last-child {

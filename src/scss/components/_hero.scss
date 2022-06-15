@@ -1,6 +1,6 @@
 .hero {
-  height: 100vh;
-  padding-top: 200px;
+  min-height: 750px;
+  padding-top: 250px;
   margin-bottom: 100px;
   position: relative;
   &::after {
@@ -12,14 +12,13 @@
     z-index: -1;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3)),
-      url("../img/bg.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  &__container {
+  &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +32,7 @@
   &__title {
     margin-bottom: var(--spacing-large);
     padding-bottom: var(--spacing-large);
-    font-size: var(--size-big);
+    font-size: 53px;
     color: var(--light-color);
     position: relative;
     &::before {
@@ -54,15 +53,37 @@
     font-weight: normal;
   }
 
+  &__chinese-titles {
+    margin-top: 80px;
+  }
+
+  &__benefits-item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 43px;
+      left: 13px;
+      width: 3px;
+      height: 73px;
+      background-color: var(--orange);
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+
   &__benefits-title {
     color: var(--light-color);
     font-size: 30px;
     font-weight: normal;
     padding-left: 40px;
     position: relative;
-    &:not(:last-child) {
-      margin-bottom: 50px;
-    }
     &::after {
       content: "";
       position: absolute;
@@ -70,22 +91,8 @@
       left: 0;
       width: 30px;
       height: 30px;
-      background-color: var(--orange);
+      border: 5px solid var(--orange);
       border-radius: 50%;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      top: 60%;
-      left: 3.5%;
-      width: 2px;
-      height: 100%;
-      background-color: var(--orange);
-      padding-bottom: 100px;
-    }
-
-    &:last-child::before {
-      display: none;
     }
   }
 
@@ -96,69 +103,19 @@
   }
 }
 
-.scroll-mouse {
-  display: block;
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--orange);
-  border-radius: 50px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.scroll-mouse::after,
-.scroll-mouse::before {
-  content: "";
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  height: 10px;
-  width: 10px;
-  border: 2px solid var(--orange);
-  -webkit-transform: translate(-50%, -100%) rotate(45deg);
-  -moz-transform: translate(-50%, -100%) rotate(45deg);
-  -ms-transform: translate(-50%, -100%) rotate(45deg);
-  -o-transform: translate(-50%, -100%) rotate(45deg);
-  transform: translate(-50%, -100%) rotate(45deg);
-  border-top: transparent;
-  border-left: transparent;
-
-  animation: scrollDown 1.5s infinite;
-}
-
-.scroll-mouse::after {
-  top: 20%;
-  animation-delay: 0.4s;
-}
-
-@keyframes scrollDown {
-  0% {
-    opacity: 0;
+.chinese__title {
+  color: var(--light-color);
+  &:first-child {
+    font-size: 25px;
   }
-
-  30% {
-    opacity: 1;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    top: 80%;
+  &:last-child {
+    font-size: 14px;
   }
 }
 
 @include tablet {
   .hero {
-    &__container {
+    &__row {
       flex-wrap: wrap;
       flex-direction: column;
     }
@@ -170,15 +127,14 @@
 
     &__btn {
       width: 100%;
-      margin-top: 100px;
+      margin-top: 60px;
     }
-    &__benefits-title {
+    &__benefits-item {
       &:not(:last-child) {
         margin-bottom: 10px;
       }
-
       &::before {
-        padding-bottom: 50px;
+        height: 33px;
       }
     }
   }
@@ -188,11 +144,19 @@
   .hero {
     padding-top: 100px;
     margin-bottom: 50px;
-    &__container {
-      justify-content: center;
+    &__row {
+      align-items: flex-start;
     }
     &__title {
       font-size: 21px;
+    }
+
+    &__benefits-item {
+      &::before {
+        height: 28px;
+        top: 32px;
+        left: 8px;
+      }
     }
 
     &__benefits-title {
@@ -201,13 +165,14 @@
         width: 20px;
         height: 20px;
       }
-      &::before {
-        left: 3%;
-      }
     }
   }
+}
 
-  .scroll-mouse {
-    bottom: 90px;
+@media (max-width: 340px) {
+  .hero__benefits-item {
+    &:first-child::before {
+      top: 50px;
+    }
   }
 }

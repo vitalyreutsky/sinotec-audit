@@ -4,17 +4,16 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  background-color: var(--accent-1);
+  background-color: var(--light-color);
+  padding-bottom: var(--spacing-large);
+  -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  padding: var(--spacing-large) 0;
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: var(--spacing-large);
-    -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
-    -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
-    box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
-    background-color: var(--accent-1);
-    padding: var(--spacing-large);
   }
 }
 

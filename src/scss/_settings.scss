@@ -23,7 +23,7 @@ h6 {
   //font-family: var(--font-family, sans-serif);
   font-family: var(--font-family, sans-serif);
   -webkit-text-size-adjust: 100%;
-  background-color: var(--accent-1);
+  background-color: rgb(250, 244, 244);
 }
 
 .page__body {
@@ -94,6 +94,12 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.min-container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--content-min-width);
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

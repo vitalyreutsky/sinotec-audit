@@ -35,13 +35,6 @@
     fill: var(--orange);
     margin-right: var(--spacing-small);
   }
-
-  &__img {
-    img {
-      border-radius: 50px;
-      box-shadow: var(--box-shadow);
-    }
-  }
 }
 
 @media (max-width: 1145px) {
