@@ -23,6 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
 /* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/smoth-scroll */ "./src/js/components/smoth-scroll.js");
 /* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -129,6 +132,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
+
+/***/ }),
+
+/***/ "./src/js/components/accordion.js":
+/*!****************************************!*\
+  !*** ./src/js/components/accordion.js ***!
+  \****************************************/
+/***/ (() => {
+
+var accordionHeader = document.querySelectorAll(".accordion__header");
+accordionHeader.forEach(function (accordionHeader) {
+  accordionHeader.addEventListener("click", function () {
+    var currentlyActiveAccordionHeader = document.querySelector(".accordion__header.active");
+
+    if (currentlyActiveAccordionHeader && currentlyActiveAccordionHeader !== accordionHeader) {
+      currentlyActiveAccordionHeader.classList.toggle("active");
+      currentlyActiveAccordionHeader.nextElementSibling.style.maxHeight = 0;
+    }
+
+    accordionHeader.classList.toggle("active");
+    var accordionBody = accordionHeader.nextElementSibling;
+
+    if (accordionHeader.classList.contains("active")) {
+      accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+    } else {
+      accordionBody.style.maxHeight = 0;
+    }
+  });
+});
 
 /***/ }),
 

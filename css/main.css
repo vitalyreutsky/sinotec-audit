@@ -7,6 +7,7 @@
   --primary: #153d65;
   --accent-1: #eaf8f5;
   --accent-2: #428783;
+  --accent-gradient: linear-gradient(90deg, #428783, #6dafac, #9ab7b5);
   --button1-bg-color: rgb(33, 33, 35);
   --button1-fg-color: #1e65a4;
   --orange: rgb(222, 152, 22);
@@ -471,9 +472,9 @@ a {
   opacity: 1;
   height: 100%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.459))), url("../img/bg.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.459)), url("../img/bg.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.459)), url("../img/bg.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.459))), url("../img/bg-containers.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.459)), url("../img/bg-containers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.459)), url("../img/bg-containers.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -837,6 +838,7 @@ a {
 }
 .confidence {
   padding: 50px;
+  margin-bottom: 100px;
 }
 .confidence__item {
   text-align: center;
@@ -852,5 +854,169 @@ a {
 }
 .confidence__btn {
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .confidence {
+    padding: 30px 0;
+  }
+  .confidence__item {
+    padding: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .confidence {
+    margin-bottom: 50px;
+  }
+}
+.services {
+  margin-bottom: 100px;
+}
+
+.accordion__item {
+  background-color: var(--accent-2);
+  background: var(--accent-gradient);
+  color: var(--light-color);
+  margin: 10px 0px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.accordion__header {
+  padding: 10px 20px 10px 20px;
+  min-height: 50px;
+  line-height: 34px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion__header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.accordion__header-img {
+  width: 40px;
+  height: 40px;
+  fill: var(--light-color);
+  margin-right: 20px;
+}
+.accordion__header-icon {
+  fill: var(--light-color);
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s linear;
+  -o-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+}
+.accordion__body-price-title {
+  padding-bottom: 30px;
+  text-align: right;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1;
+  width: 10px;
+  padding-bottom: 10px;
+}
+.accordion__body-price {
+  text-align: right;
+  font-size: 29px;
+  font-weight: 700;
+  vertical-align: top;
+}
+.accordion__body-text {
+  max-width: 70%;
+  width: 100%;
+  font-size: 19px;
+}
+.accordion__inner-content {
+  padding: 0 10px;
+}
+.accordion__table {
+  width: 100%;
+}
+.accordion__table td {
+  padding: 20px 0;
+}
+
+.accordion__header.active .accordion__header-icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1024px) {
+  .accordion__table td {
+    padding: 10px 0;
+  }
+  .accordion__body-price-title {
+    text-align: right;
+    padding-bottom: 0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .accordion__body-price-title:last-child {
+    padding-left: 10px;
+  }
+  .accordion__body-text {
+    font-size: 15px;
+  }
+  .accordion__body-price {
+    font-size: 19px;
+    font-weight: normal;
+  }
+}
+@media (max-width: 576px) {
+  .services {
+    margin-bottom: 50px;
+  }
+  .accordion__header {
+    padding: 10px;
+  }
+  .accordion__header-title {
+    font-size: 13px;
+  }
+  .accordion__body {
+    overflow-x: auto;
+  }
+  .accordion__table td {
+    padding: 10px 0;
+  }
+  .accordion__body-price-title {
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .accordion__body-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .accordion__body-price {
+    font-size: 13px;
+    font-weight: normal;
+  }
 }
 /*# sourceMappingURL=main.css.map */
