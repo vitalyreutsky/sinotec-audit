@@ -1,0 +1,150 @@
+.contacts {
+  margin-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__form {
+    width: 40%;
+  }
+
+  &__info {
+    width: 55%;
+  }
+}
+
+.form {
+  padding: var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__label {
+    width: 100%;
+    margin-bottom: var(--spacing-large);
+  }
+
+  &__input {
+    background-color: var(--light-color);
+    border-radius: 5px;
+    border-left: 3px solid var(--orange);
+    width: 100%;
+    height: 40px;
+    padding: 0px 20px;
+    outline: none;
+    box-shadow: var(--box-shadow);
+  }
+
+  &__input-textarea {
+    padding: 10px 20px;
+    height: 100px;
+    resize: none;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.contacts {
+  &__info-item {
+    min-height: 100px;
+    background-color: var(--light-color);
+    margin-bottom: var(--spacing-large);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    border-left: 3px solid var(--orange);
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-large);
+  }
+
+  &__info-icon {
+    width: 80px;
+    height: 80px;
+    fill: var(--primary);
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    opacity: 0.1;
+  }
+}
+.adress {
+  &__text {
+    p {
+      font-size: 17px;
+    }
+  }
+}
+.phone {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: underline;
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--primary);
+      margin-right: var(--spacing-extra-large);
+    }
+  }
+
+  &__social {
+    font-size: 17px;
+  }
+}
+.mail {
+  display: flex;
+  align-items: center;
+  &__adress {
+    text-decoration: underline;
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-right: var(--spacing-extra-large);
+  }
+}
+
+@media (max-width: 900px) {
+  .contacts__inner {
+    justify-content: center;
+  }
+  .contacts__info {
+    width: 100%;
+    margin-bottom: var(--spacing-extra-large);
+  }
+
+  .contacts__form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts__form {
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .contacts {
+    margin-bottom: 50px;
+
+    &__info-item {
+      padding: 10px;
+    }
+  }
+
+  .phone__link {
+    a {
+      font-size: 15px;
+    }
+  }
+  .phone__social {
+    margin: 0;
+    font-size: 11px;
+  }
+}
