@@ -16,7 +16,6 @@
 }
 
 .form {
-  padding: var(--spacing-large);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,14 +111,16 @@
 @media (max-width: 900px) {
   .contacts__inner {
     justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
   }
   .contacts__info {
     width: 100%;
-    margin-bottom: var(--spacing-extra-large);
   }
 
   .contacts__form {
     width: 60%;
+    margin-bottom: var(--spacing-extra-large);
   }
 }
 
