@@ -465,8 +465,8 @@ a {
   }
 }
 .hero {
-  min-height: 100vh;
-  padding-top: 250px;
+  height: 750px;
+  padding-top: 200px;
   margin-bottom: 100px;
   position: relative;
 }
@@ -615,7 +615,20 @@ a {
     color: var(--light-color);
   }
 }
+@media (min-width: 1024) {
+  .hero {
+    height: 750px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    height: 1000px;
+  }
+}
 @media (max-width: 768px) {
+  .hero {
+    height: 600px;
+  }
   .hero__benefits {
     margin-bottom: 50px;
   }
