@@ -1,5 +1,5 @@
 // Подключение плавной прокрутки к якорям
-const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
+const menuLinks = document.querySelectorAll("[data-goto]");
 
 if (menuLinks.length > 0) {
   menuLinks.forEach((menuLink) => {

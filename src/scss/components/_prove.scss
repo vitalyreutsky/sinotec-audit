@@ -7,6 +7,7 @@
   }
 
   &__title {
+    text-align: center;
     color: var(--orange);
     font-weight: bold;
     font-size: 33px;
@@ -15,6 +16,16 @@
 
   &__btn {
     width: 300px;
+  }
+}
+
+@include small-tablet {
+  .prove__inner {
+    flex-wrap: wrap;
+  }
+  .prove__title {
+    margin-bottom: 30px;
+    margin-right: 0;
   }
 }
 
