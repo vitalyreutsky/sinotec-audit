@@ -31,3 +31,9 @@
     margin-bottom: 50px;
   }
 }
+
+.choices__list .choices__list--dropdown {
+  &::after {
+    border-color: var(--orange);
+  }
+}

@@ -50,15 +50,6 @@
   }
 }
 
-@include small-tablet {
-  .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 @include mobile {
   .about {
     padding-bottom: 0;
