@@ -50,8 +50,17 @@
   }
 }
 
+@include small-tablet {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @include mobile {
   .about {
-    margin-bottom: 50px;
+    padding-bottom: 0;
   }
 }

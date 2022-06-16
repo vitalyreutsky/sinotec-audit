@@ -1,6 +1,6 @@
 .hero {
-  min-height: 750px;
-  padding-top: 250px;
+  height: 750px;
+  padding-top: 200px;
   margin-bottom: 100px;
   position: relative;
   &::after {
@@ -53,8 +53,12 @@
     font-weight: normal;
   }
 
+  &__btn {
+    margin-bottom: 50px;
+  }
+
   &__chinese-titles {
-    margin-top: 80px;
+    margin-bottom: 80px;
   }
 
   &__benefits-item {
@@ -118,16 +122,12 @@
     &__row {
       flex-wrap: wrap;
       flex-direction: column;
+      align-items: flex-start;
     }
     &__text {
       max-width: 100%;
       justify-content: center;
       margin-bottom: 30px;
-    }
-
-    &__btn {
-      width: 100%;
-      margin-top: 60px;
     }
     &__benefits-item {
       &:not(:last-child) {
@@ -138,33 +138,103 @@
       }
     }
   }
+
+  .hero__benefits {
+    margin-bottom: 50px;
+  }
+  .hero__benefits-title {
+    color: var(--light-color);
+  }
+
+  .hero__benefits-subtitle {
+    color: var(--light-color);
+  }
 }
 
-@include mobile {
+@media (min-width: 1024) {
   .hero {
-    padding-top: 100px;
+    height: 750px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 1000px;
+  }
+}
+
+@include small-tablet {
+  .hero {
+    height: 600px;
     margin-bottom: 50px;
     &__row {
       align-items: flex-start;
+      flex: 1 0 auto;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    &__text {
+      margin-bottom: 0;
     }
     &__title {
       font-size: 21px;
     }
-
+    &__subtitle {
+      font-size: 15px;
+    }
+    &__btn {
+      width: 100%;
+      margin-bottom: 100px;
+    }
+    &__benefits {
+      margin-bottom: 50px;
+    }
     &__benefits-item {
       &::before {
-        height: 28px;
-        top: 32px;
+        height: 30px;
+        top: -12px;
         left: 8px;
+      }
+
+      &:last-child::before {
+        display: block;
+      }
+
+      &:first-child::before {
+        display: none;
       }
     }
 
     &__benefits-title {
       font-size: 17px;
+      color: var(--orange);
       &::after {
         width: 20px;
         height: 20px;
       }
+    }
+
+    &__benefits-subtitle {
+      color: var(--primary);
+    }
+
+    &__chinese-titles {
+      margin-bottom: 50px;
+      flex: 0 0 auto;
+    }
+  }
+
+  .chinese__title {
+    &:first-child {
+      font-size: 18px;
+    }
+    &:last-child {
+      font-size: 13px;
     }
   }
 }
