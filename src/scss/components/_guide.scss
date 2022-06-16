@@ -1,0 +1,43 @@
+.guide {
+  margin-bottom: 100px;
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 22px;
+    margin-right: 50px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@include mobile {
+  .guide {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
+@include mobile {
+  .guide {
+    margin-bottom: 50px;
+  }
+}
