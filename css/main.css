@@ -465,7 +465,7 @@ a {
   }
 }
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 250px;
   margin-bottom: 100px;
   position: relative;
@@ -615,7 +615,7 @@ a {
     color: var(--light-color);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .hero__benefits {
     margin-bottom: 50px;
   }
@@ -756,7 +756,7 @@ a {
     margin-bottom: var(--spacing-extra-large);
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .about {
     display: -webkit-box;
     display: -ms-flexbox;
