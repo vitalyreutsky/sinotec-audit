@@ -17,12 +17,22 @@
   font-size: var(--size-big);
   color: var(--orange);
   font-weight: 700;
+  display: block;
+  margin-bottom: var(--spacing-extra-large);
+}
+
+.calc__btn {
+  width: 250px;
 }
 
 @include small-tablet {
   .price__inner {
     flex-direction: column-reverse;
     flex-wrap: wrap;
+  }
+
+  .price__calc {
+    margin-bottom: var(--spacing-extra-large);
   }
 }
 
