@@ -20,16 +20,19 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/aos */ "./src/js/components/aos.js");
-/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
-/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/smoth-scroll */ "./src/js/components/smoth-scroll.js");
-/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_smoth_scroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_progress_result__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/progress-result */ "./src/js/components/progress-result.js");
-/* harmony import */ var _components_progress_result__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_progress_result__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
-/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_choices__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/choices */ "./src/js/components/choices.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/scrollToTop */ "./src/js/components/scrollToTop.js");
+/* harmony import */ var _components_scrollToTop__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_scrollToTop__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/smoth-scroll */ "./src/js/components/smoth-scroll.js");
+/* harmony import */ var _components_smoth_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_smoth_scroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_progress_result__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/progress-result */ "./src/js/components/progress-result.js");
+/* harmony import */ var _components_progress_result__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_progress_result__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dynamic_adapt */ "./src/js/components/dynamic_adapt.js");
+/* harmony import */ var _components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_dynamic_adapt__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_choices__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/choices */ "./src/js/components/choices.js");
+
 
 
 
@@ -596,6 +599,62 @@ window.addEventListener("scroll", function () {
     hideProgress();
   }
 });
+
+/***/ }),
+
+/***/ "./src/js/components/scrollToTop.js":
+/*!******************************************!*\
+  !*** ./src/js/components/scrollToTop.js ***!
+  \******************************************/
+/***/ (() => {
+
+var btnScrollToTop = document.querySelector(".scroll-btn");
+window.addEventListener("scroll", checkHeight);
+
+function checkHeight() {
+  if (window.pageYOffset > 300) {
+    // Show backToTopButton
+    if (!btnScrollToTop.classList.contains("btnEntrance")) {
+      btnScrollToTop.classList.remove("btnExit");
+      btnScrollToTop.classList.add("btnEntrance");
+      btnScrollToTop.style.display = "block";
+    }
+  } else {
+    // Hide backToTopButton
+    if (btnScrollToTop.classList.contains("btnEntrance")) {
+      btnScrollToTop.classList.remove("btnEntrance");
+      btnScrollToTop.classList.add("btnExit");
+      setTimeout(function () {
+        btnScrollToTop.style.display = "none";
+      }, 250);
+    }
+  }
+}
+
+btnScrollToTop.addEventListener("click", smoothScrollBackToTop);
+
+function smoothScrollBackToTop() {
+  var targetPosition = 0;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var duration = 750;
+  var start = null;
+  window.requestAnimationFrame(step);
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    var progress = timestamp - start;
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+}
+
+function easeInOutCubic(t, b, c, d) {
+  t /= d / 2;
+  if (t < 1) return c / 2 * t * t * t + b;
+  t -= 2;
+  return c / 2 * (t * t * t + 2) + b;
+}
 
 /***/ }),
 
