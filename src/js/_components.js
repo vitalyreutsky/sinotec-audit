@@ -7,6 +7,8 @@ import "./components/progress-result";
 import "./components/dynamic_adapt";
 import "./components/choices";
 import "./components/swiper";
+import "./components/validate-form";
+
 
 
 
