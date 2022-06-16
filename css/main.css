@@ -616,34 +616,14 @@ a {
   }
 }
 @media (max-width: 768px) {
-  .hero__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 100%;
-  }
   .hero__benefits {
     margin-bottom: 50px;
-  }
-  .hero__row {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
   }
   .hero__benefits-title {
     color: var(--orange);
   }
   .hero__benefits-subtitle {
     color: var(--primary);
-  }
-  .hero__chinese-titles {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
   }
 }
 @media (max-width: 576px) {
@@ -654,6 +634,19 @@ a {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+  }
+  .hero__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100%;
   }
   .hero__text {
     margin-bottom: 0;
@@ -687,6 +680,9 @@ a {
   }
   .hero__chinese-titles {
     margin-bottom: 50px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   .chinese__title:first-child {
     font-size: 18px;
