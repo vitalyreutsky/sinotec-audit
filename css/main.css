@@ -631,6 +631,7 @@ a {
 }
 @media (max-width: 576px) {
   .hero {
+    height: 100vh;
     margin-bottom: 50px;
   }
   .hero__row {
