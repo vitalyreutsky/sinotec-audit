@@ -466,6 +466,7 @@ a {
 }
 .hero {
   height: 100vh;
+  padding-top: 250px;
   margin-bottom: 100px;
   position: relative;
 }
