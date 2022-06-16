@@ -41,7 +41,7 @@
 /* stylelint-disable */ /* stylelint-disable */
 @font-face {
   font-family: "Muller";
-  src: url("../fonts/../fonts/MullerRegular-0d8c707456.woff2") format("woff2");
+  src: url("../fonts/../fonts/MullerRegular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -171,6 +171,11 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.just-validate-error-label {
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .scroll-btn {
@@ -557,9 +562,9 @@ a {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/bg-5e3ec82f7f.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/bg-5e3ec82f7f.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/bg-5e3ec82f7f.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../img/bg.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
