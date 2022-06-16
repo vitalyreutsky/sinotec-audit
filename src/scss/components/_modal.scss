@@ -4,12 +4,20 @@
     height: 120px;
     border: 1px solid var(--orange);
     box-shadow: var(--box-shadow);
+    position: relative;
+  }
+
+  &__btn {
+    outline: none;
   }
 
   &__close {
-    color: var(--orange);
-    font-size: 30px;
-    outline: none;
+    fill: var(--orange);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
   }
 
   &__title {

@@ -3,6 +3,11 @@ import GraphModal from "graph-modal";
 
 const modal = new GraphModal();
 
+const modalCloseBtn = document.querySelector(".modal-success__btn");
+modalCloseBtn.addEventListener("click", () => {
+  modal.close("modal-success");
+});
+
 const rules1 = [
   {
     ruleSelector: ".guide-validate-email",
@@ -53,6 +58,8 @@ const rules2 = [
 const afterForm = () => {
   modal.open("modal-succes");
 };
+
+modal.open("modal-succes");
 
 validateForms(".guide-form", rules1, afterForm);
 validateForms(".cont-form", rules2, afterForm);

@@ -6,9 +6,13 @@
     data-graph-target="modal-succes"
   >
     <button
-      class="btn-reset graph-modal__close modal-success__close"
+      class="modal-success__btn btn-reset graph-modal__close"
       aria-label="Закрыть модальное окно"
-    >&times</button>
+    >
+      <svg class="modal-success__close">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
     <div class="graph-modal__content modal-success__content">
       <h3 class="modal-success__title">Спасибо! Скоро мы с вами свяжемся!</h3>
     </div>
