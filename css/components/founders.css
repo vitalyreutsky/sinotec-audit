@@ -1,0 +1,29 @@
+.founders {
+  margin-bottom: 100px;
+}
+.founders__wrapper {
+  padding-top: 50px;
+}
+.founders__slide {
+  min-height: 200px;
+  background-color: var(--light-color);
+  padding: 130px var(--spacing-extra-large) 50px;
+  text-align: center;
+  border-radius: 15px;
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+.founders__img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.founders__name {
+  font-size: 31px;
+}
+/*# sourceMappingURL=founders.css.map */
