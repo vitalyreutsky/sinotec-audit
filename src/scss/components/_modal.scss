@@ -1,0 +1,21 @@
+.modal-success {
+  &__container {
+    max-width: 500px;
+    height: 120px;
+    border: 1px solid var(--orange);
+    box-shadow: var(--box-shadow);
+  }
+
+  &__close {
+    color: var(--orange);
+    font-size: 30px;
+    outline: none;
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: var(--spacing-extra-large);
+    font-size: 21px;
+    color: var(--orange);
+  }
+}

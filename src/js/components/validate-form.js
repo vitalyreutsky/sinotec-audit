@@ -1,4 +1,7 @@
 import { validateForms } from "../functions/validate-forms";
+import GraphModal from "graph-modal";
+
+const modal = new GraphModal();
 
 const rules1 = [
   {
@@ -48,7 +51,7 @@ const rules2 = [
 ];
 
 const afterForm = () => {
-  console.log("Произошла отправка, тут можно писать любые действия");
+  modal.open("modal-succes");
 };
 
 validateForms(".guide-form", rules1, afterForm);
