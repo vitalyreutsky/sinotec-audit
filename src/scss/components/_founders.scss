@@ -1,0 +1,41 @@
+.founders {
+  margin-bottom: 100px;
+  &__wrapper {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  &__slide {
+    background-color: var(--light-color);
+    padding: 130px 0px var(--spacing-extra-large);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+  }
+
+  &__img {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 3px solid var(--orange);
+  }
+
+  &__name {
+    font-size: 31px;
+  }
+
+  &__adress {
+    font-size: 21px;
+  }
+}
+
+.swiper-slide-active {
+}
+
+@include mobile {
+  .founders {
+    margin-bottom: 25px;
+  }
+}
