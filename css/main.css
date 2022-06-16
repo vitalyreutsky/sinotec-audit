@@ -658,6 +658,7 @@ a {
   }
   .hero__btn {
     width: 100%;
+    margin-bottom: 100px;
   }
   .hero__benefits-item::before {
     height: 30px;
