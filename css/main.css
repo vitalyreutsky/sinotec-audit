@@ -619,9 +619,6 @@ a {
   .hero__benefits {
     margin-bottom: 50px;
   }
-  .hero__text {
-    height: calc(100vh - 500px);
-  }
   .hero__benefits-title {
     color: var(--orange);
   }
@@ -641,7 +638,6 @@ a {
   }
   .hero__text {
     margin-bottom: 0;
-    height: calc(100vh - 400px);
   }
   .hero__title {
     font-size: 21px;
