@@ -1,0 +1,25 @@
+.prove {
+  margin-bottom: 100px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 33px;
+    margin-right: 50px;
+  }
+
+  &__btn {
+    width: 300px;
+  }
+}
+
+@include mobile {
+  .prove {
+    margin-bottom: 50px;
+  }
+}
