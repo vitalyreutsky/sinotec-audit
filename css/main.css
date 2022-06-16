@@ -626,7 +626,7 @@ a {
     color: var(--primary);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero {
     margin-bottom: 50px;
   }
