@@ -59,7 +59,5 @@ const afterForm = () => {
   modal.open("modal-succes");
 };
 
-modal.open("modal-succes");
-
 validateForms(".guide-form", rules1, afterForm);
 validateForms(".cont-form", rules2, afterForm);
