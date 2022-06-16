@@ -322,6 +322,25 @@ a {
   background-color: var(--orange-hover);
 }
 
+.modal-success__container {
+  max-width: 500px;
+  height: 120px;
+  border: 1px solid var(--orange);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+.modal-success__close {
+  color: var(--orange);
+  font-size: 30px;
+  outline: none;
+}
+.modal-success__title {
+  text-align: center;
+  padding-top: var(--spacing-extra-large);
+  font-size: 21px;
+  color: var(--orange);
+}
+
 .header {
   position: fixed;
   top: 0;
