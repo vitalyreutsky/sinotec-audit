@@ -70,15 +70,6 @@
           <a
             href="#"
             class="nav__link"
-            data-goto=".peculiarity-scroll"
-            data-menu-item
-            >Направления</a
-          >
-        </li>
-        <li class="nav__item">
-          <a
-            href="#"
-            class="nav__link"
             data-goto=".results-scroll"
             data-menu-item
             >Результат</a
@@ -116,9 +107,13 @@
     data-graph-target="modal-succes"
   >
     <button
-      class="btn-reset graph-modal__close modal-success__close"
+      class="modal-success__btn btn-reset graph-modal__close"
       aria-label="Закрыть модальное окно"
-    >&times</button>
+    >
+      <svg class="modal-success__close">
+        <use xlink:href="img/sprite.svg#close"></use>
+      </svg>
+    </button>
     <div class="graph-modal__content modal-success__content">
       <h3 class="modal-success__title">Спасибо! Скоро мы с вами свяжемся!</h3>
     </div>
@@ -594,21 +589,27 @@
         </div>
         <div class="peculiarity__item">
           <svg class="peculiarity-icon">
-            <use xlink:href="img/sprite.svg#flask"></use>
+            <use xlink:href="img/sprite.svg#industry"></use>
           </svg>
           <h4 class="peculiarity__title">Сырье и компоненты</h4>
         </div>
       </div>
       <div class="peculiarity__descr">
-        <h4 class="peculiarity__items-title">
-          Аудит в режиме LIVE и оплата инспекции поставщиком
-        </h4>
+        <h4 class="peculiarity__items-title">Уникальный оффер для Вас</h4>
         <p class="peculiarity__text">
-          Наше особое предложение — это проведение инспекции или аудита в режиме
-          Live. Режим Live — это on-line трансляция с места событий: будь то
-          инспекция товара, или аудит фабрики, мы даем возможность Клиенту
-          полноценно «включиться» в процесс и реагировать в режиме
-          «вопрос-ответ».
+          — проведение инспекции или аудита в режиме Live. Режим Live — это
+          on-line трансляция с места событий: будь то инспекция товара, или
+          аудит фабрики, мы даем возможность Клиенту полноценно «включиться» в
+          процесс и реагировать в режиме стрима «вопрос-ответ».
+        </p>
+        <p class="peculiarity__text">
+          — инспекция предприятия или компании с целью подтверждения мировым
+          стандартам Ecological and Social Standards. Вы узнаете есть ли в
+          компании социальные гарантии для работников, степень квалификации и
+          уровень оплаты труда, спонсорское содействие. Важный показатель —
+          оказывает ли предприятие воздействие на окружающую природу, какое
+          сырье использует и насколько заботиться об имидже green safety
+          company!
         </p>
         <picture>
           <source srcset="img/peculiarity.avif" type="image/avif" />

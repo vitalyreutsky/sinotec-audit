@@ -677,6 +677,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var modal = new graph_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var modalCloseBtn = document.querySelector(".modal-success__btn");
+modalCloseBtn.addEventListener("click", function () {
+  modal.close("modal-success");
+});
 var rules1 = [{
   ruleSelector: ".guide-validate-email",
   rules: [{
