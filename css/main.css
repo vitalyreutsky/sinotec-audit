@@ -1379,6 +1379,13 @@ a {
   .peculiarity {
     padding-bottom: 0;
   }
+  .peculiarity__title {
+    font-size: 17px;
+  }
+  .peculiarity-icon {
+    width: 30px;
+    height: 30px;
+  }
 }
 .price {
   margin-bottom: 100px;
