@@ -1279,16 +1279,18 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .peculiarity__items {
-  width: 40%;
+  margin-bottom: 100px;
+  width: 70%;
+  margin: 0 auto 100px;
 }
 .peculiarity__items-title {
+  text-align: center;
   font-size: 23px;
   margin-bottom: var(--spacing-large);
 }
@@ -1300,16 +1302,36 @@ a {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: var(--spacing-large);
+  background-color: var(--light-color);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-small) var(--spacing-large);
+  border-left: 3px solid var(--orange);
+  border-radius: 15px;
 }
 .peculiarity__title {
   font-weight: normal;
   font-size: 21px;
 }
-.peculiarity__descr {
-  width: 60%;
+.peculiarity__descr-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .peculiarity__text {
+  max-width: 50%;
+  line-height: 1.6;
+}
+.peculiarity__text p {
   margin: 0;
+}
+.peculiarity__text p:not(:last-child) {
   margin-bottom: var(--spacing-extra-large);
 }
 
@@ -1329,8 +1351,28 @@ a {
     width: 100%;
     margin-bottom: var(--spacing-extra-large);
   }
-  .peculiarity__descr {
-    width: 100%;
+}
+@media (max-width: 768px) {
+  .peculiarity__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .peculiarity__items {
+    margin-bottom: 0;
+  }
+  .peculiarity__descr-inner {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+  .peculiarity__text {
+    max-width: 100%;
+    margin-bottom: var(--spacing-large);
   }
 }
 @media (max-width: 576px) {
