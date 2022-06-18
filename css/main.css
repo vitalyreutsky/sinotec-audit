@@ -309,7 +309,7 @@ a {
 .btn__primary {
   padding: var(--spacing-medium) var(--spacing-extra-large);
   border-radius: 10px;
-  background-color: #ffbc40;
+  background-color: #ed9121;
   color: var(--light-color);
   font-size: var(--size-medium);
   -webkit-box-shadow: var(--box-shadow);
