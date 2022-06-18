@@ -1,5 +1,4 @@
 .about {
-  padding: var(--spacing-extra-large) 0 50px 0;
   margin-bottom: 100px;
   &__inner {
     display: flex;
@@ -47,11 +46,5 @@
     &__descr {
       margin-bottom: var(--spacing-extra-large);
     }
-  }
-}
-
-@include mobile {
-  .about {
-    padding-bottom: 0;
   }
 }

@@ -2,36 +2,59 @@
   margin-bottom: 100px;
   &__inner {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   &__items {
-    width: 40%;
+  }
+
+  &__item-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 20px;
+    max-width: 90%;
+    margin: 0 auto 70px;
   }
 
   &__items-title {
+    text-align: center;
     font-size: 23px;
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-extra-large);
   }
 
   &__item {
     display: flex;
     align-items: center;
     margin-bottom: var(--spacing-large);
+    background-color: var(--light-color);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-small) var(--spacing-large);
+    border-left: 3px solid var(--orange);
+    border-radius: 15px;
+    height: 70px;
   }
 
   &__title {
     font-weight: normal;
-    font-size: 21px;
+    font-size: 17px;
   }
 
-  &__descr {
-    width: 60%;
+  &__descr-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__text {
-    margin: 0;
+    max-width: 50%;
+    line-height: 1.6;
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-extra-large);
+      }
+    }
   }
 }
 
@@ -48,13 +71,34 @@
       flex-wrap: wrap;
     }
 
+    &__item-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 20px 20px;
+    }
+
     &__items {
       width: 100%;
       margin-bottom: var(--spacing-extra-large);
     }
+  }
+}
 
-    &__descr {
-      width: 100%;
+@include small-tablet {
+  .peculiarity {
+    &__items {
+      margin-bottom: 0;
+    }
+
+    &__descr-inner {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      max-width: 100%;
+      margin-bottom: var(--spacing-large);
     }
   }
 }
@@ -62,5 +106,30 @@
 @include mobile {
   .peculiarity {
     padding-bottom: 0;
+
+    &__title {
+      font-size: 17px;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .peculiarity {
+    &__item-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      gap: 0;
+      max-width: 100%;
+    }
+
+    &__item {
+      height: 50px;
+    }
   }
 }

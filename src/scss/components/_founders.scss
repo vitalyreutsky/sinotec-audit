@@ -33,6 +33,8 @@
 
 @include mobile {
   .founders {
-    margin-bottom: 25px;
+    .title {
+      font-size: 25px;
+    }
   }
 }

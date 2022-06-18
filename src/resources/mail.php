@@ -33,18 +33,16 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'sinotec.team@gmail.com'; // Логин на почте
-  $mail->Password   = 'Sinotec2022team'; // Пароль на почте
+  $mail->Username   = 'vreutsky77@gmail.com'; // Логин на почте
+  $mail->Password   = 'grquqdchcsxvecuh'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('sinotec.team@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('vreutsky77@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  //$mail->addAddress('info@sinotec.team');
-  //$mail->addAddress('sinotec.team@gmail.com');
-  $mail->addAddress('vreutsky77@mail.ru');
-
+  $mail->addAddress('info@sinotec.team');
+  $mail->addAddress('sinotec.team@gmail.com');
 
 
   // Отправка сообщения
