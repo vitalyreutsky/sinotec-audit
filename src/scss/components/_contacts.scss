@@ -80,15 +80,20 @@
 .phone {
   display: flex;
   align-items: center;
-  &__link {
+  &__links {
     display: flex;
     align-items: center;
-    a {
+    &-phone {
       text-decoration: underline;
-      font-size: 21px;
-      font-weight: bold;
       color: var(--primary);
       margin-right: var(--spacing-extra-large);
+    }
+    &-link {
+      margin-right: var(--spacing-large);
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
@@ -139,13 +144,12 @@
     }
   }
 
-  .phone__link {
-    a {
-      font-size: 15px;
-    }
-  }
   .phone__social {
     margin: 0;
     font-size: 11px;
+  }
+
+  .phone__links-link {
+    margin-right: 10px;
   }
 }
