@@ -149,7 +149,7 @@
           Бизнес — решения для управления рисками при импорте из Китая
         </h3>
         <button
-          class="hero__btn btn__primary btn__test btn-reset"
+          class="hero__btn btn__primary btn-reset"
           data-da=".hero__container,1024,last"
           data-goto=".contacts"
         >
@@ -194,7 +194,7 @@
         ФАБРИКИ
       </h3>
       <button
-        class="price__act-btn btn-reset btn__primary btn__test"
+        class="price__act-btn btn-reset btn__primary"
         data-goto=".contacts"
       >
         Узнать подробнее
@@ -355,7 +355,7 @@
             placeholder="Ваш E-mail"
           />
         </label>
-        <button class="btn__primary btn-reset btn__test form__btn">Отправить</button>
+        <button class="btn__primary btn-reset form__btn">Отправить</button>
       </form>
     </div>
   </div>
@@ -905,9 +905,38 @@
           <svg class="contacts__info-icon">
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
-          <div class="phone__link">
-            <a href="tel:37254356000">+372 54356000</a>
-            <p class="phone__social">Viber, Telegram, WhatsApp</p>
+          <div class="phone__links">
+            <a class="phone__links-phone" href="tel:37254356000">+372 54356000</a>
+            <a class="phone__links-link" href="viber://chat?number=37254356000">
+              <img
+                loading="lazy"
+                src="img/viber.svg"
+                class="image"
+                alt="viber"
+              />
+            </a>
+            <a
+              href="https://t.me/SINOTEC_AUDIT_ADVISORY_TEAM"
+              class="phone__links-link"
+            >
+              <img
+                loading="lazy"
+                src="img/telegram.svg"
+                class="image"
+                alt="telegram"
+              />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send? phone=37254356000"
+              class="phone__links-link"
+            >
+              <img
+                loading="lazy"
+                src="img/whatsapp.svg"
+                class="image"
+                alt="whatsapp"
+              />
+            </a>
           </div>
         </div>
         <div class="contacts__info-item mail">

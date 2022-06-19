@@ -12,7 +12,7 @@
   --button1-bg-color: rgb(33, 33, 35);
   --button1-fg-color: #1e65a4;
   --orange: #ff9900;
-  --orange-hover: rgb(154, 110, 28);
+  --orange-hover: #f49f20;
   --spacing-small: 10px;
   --spacing-medium: 15px;
   --spacing-large: 20px;
@@ -309,7 +309,7 @@ a {
 .btn__primary {
   padding: var(--spacing-medium) var(--spacing-extra-large);
   border-radius: 10px;
-  background-color: #ed9121;
+  background-color: var(--orange);
   color: var(--light-color);
   font-size: var(--size-medium);
   -webkit-box-shadow: var(--box-shadow);
@@ -320,10 +320,6 @@ a {
 }
 .btn__primary:hover {
   background-color: var(--orange-hover);
-}
-
-.btn__test {
-  background-color: var(--orange);
 }
 
 .modal-success__container {
@@ -1560,7 +1556,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
 }
-.phone__link {
+.phone__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1568,12 +1564,17 @@ a {
   -ms-flex-align: center;
   align-items: center;
 }
-.phone__link a {
+.phone__links-phone {
   text-decoration: underline;
-  font-size: 21px;
-  font-weight: bold;
   color: var(--primary);
   margin-right: var(--spacing-extra-large);
+}
+.phone__links-link {
+  margin-right: var(--spacing-large);
+}
+.phone__links-link img {
+  width: 30px;
+  height: 30px;
 }
 .phone__social {
   font-size: 17px;
