@@ -40,12 +40,14 @@
     margin-bottom: 50px;
     &__title {
       margin-bottom: 10px;
+      font-size: 17px;
     }
     &__content {
       flex-direction: column;
       align-items: center;
     }
     &__img {
+      opacity: 0.8;
       transform: none;
     }
   }
